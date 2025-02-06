@@ -1,0 +1,12 @@
+REST - Representational State Transfer
+Rest is an architectural style that defines a set of constraints to be used for creatin web services.
+--> (Iska matlab ye h ki, ham node ke andar jo express aata h uske andar ham APIs banate h, aur inhi APIs ke collection ko ham web services kh rhe h, ab tak ham (/name) ya (/register) jaisa kuch bhi likh kr apni API requests ko handle krte aa rhe h. Lekin ab ham Restful APIs ko use krenge jo hame ek set of constraints (mtlb rules) btayengi inhi APIs ko handle krne ke liye).
+--> Resful APIs ko ham CRUD operations perform krne ke liye use krenge, vaise to CRUD ek Databases ka concept h but abhi ke liye ham ise Resful APIs ki liye use krenge.   
+
+CRUD operations : Saare CRUD operations ko perform krne ke liye neeche wale saare http verbs ki help leke ham seekhenge ki kis tareeke se hamari requests kaam aati h.
+
+--> GET retreive resources > GET is used to read(means retreive resources). {R of CRUD}
+--> POST submits new data to the server > POST is used to create {C of CRUD}
+--> PUT updates existing data >
+--> PATCH updates existing data partially >
+--> DELETE removes data > 
