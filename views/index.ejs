@@ -11,9 +11,11 @@
 <body>
     <h1>Quora Posts</h1>
     <%for(post of posts){%>
-            <div class="post">
-                <h3 class="user">@<%= post.username %></h3>
+            <div class="user">
+                <h3 class="post">@<%= post.username %></h3>
                 <h4 class="content"><%= post.content %></h4>
+                <br><br><br>
+        <a href="http://localhost:8080/posts/<%= post.id %>">Show Post</a>
             </div>
         <% }%>
 
