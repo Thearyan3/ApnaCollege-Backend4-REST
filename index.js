@@ -21,8 +21,8 @@ let posts = [
     },
     {
         id: uuidv4(),
-        username: "Navya",
-        content: "I Never Understood her."
+        username: "Lionel Messi",
+        content: "Greatest Of All Time!"
     },
     {
         id: uuidv4(),
@@ -71,7 +71,7 @@ app.delete("/posts/:id", (req, res) => {
     let {id} = req.params;
     posts = posts.filter((p) => id !== p.id);
     res.redirect("/posts");
-})
+});
 
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
