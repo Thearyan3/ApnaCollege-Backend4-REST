@@ -11,7 +11,8 @@
     <p>Post Username: @ <%= post.username %></p>
     <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
         <textarea rows="10" cols="35" name="content"><%= post.content %></textarea>
+        <button type="submit">Submit</button>
     </form>
-    <button>Submit</button>
+    
 </body>
 </html>
