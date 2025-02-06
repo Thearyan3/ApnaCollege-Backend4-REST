@@ -4,7 +4,7 @@ const port = 8080;
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 
-app.use(express.urlencoded({extended : true}));
+app.use(express.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -45,9 +45,18 @@ app.post("/posts", (req, res) => {
 });
 
 app.get("/posts/:id", (req, res) => {
-    let { id } =  req.params;
+    let { id } = req.params;
     let post = posts.find((p) => id === p.id);
     res.render("show.ejs", { post });
+});
+
+app.patch("/posts/:id", (req, res) => {
+    let { id } = req.params;
+    let newContent = req.body.content;
+    let post = posts.find((p) => id === p.id);
+    post.content = newContent;
+    console.log(post);
+    res.send("Patch request Working!");
 });
 
 app.listen(port, () => {
